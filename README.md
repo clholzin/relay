@@ -5,7 +5,7 @@
 Current POC View based on Network traffic capture of packet data and displayed as particles in D3.js through websocket.
 
 
-![intention](https://stash.aexp.com/stash/users/cholzing/repos/relay_poc/raw/slides/images/relay_hub_many1.gif)
+![intention](https://github.com/clholzin/captis/blob/master/slides/images/relay_hub_many1.gif)
 
 
 
