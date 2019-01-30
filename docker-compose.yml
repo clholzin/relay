@@ -1,0 +1,25 @@
+version: '3'
+services:
+  relay:
+    build: relay/.
+    privileged: true
+  accept:
+    build: accept/.
+    privileged: true
+    depends_on:
+      - relay
+  send:
+    build: send/.
+    depends_on:
+      - relay
+      - accept  
+    privileged: true
+  hub:
+    build: hub/.
+    privileged: false
+    depends_on:
+      - relay
+      - accept
+      - send  
+    ports:
+     - "9999:9999"

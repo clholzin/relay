@@ -1,0 +1,65 @@
+Relay
+Distributed Network Capture and Recorder
+13:30 4 Oct 2018
+Tags: network, packet, viewer, packet, particls
+
+Craig Holzinger
+Fullstack - Sr. Golang, Javascript Engineer
+craig.holzinger@aexp.com
+
+* How do we Quantify Network Health?
+- Terminal Views
+- Megabits Counts
+- Transactions a Second
+- Graphs
+- Stats
+
+Wish there was a better solution.
+
+* Wish
+- .... we could see integration
+- .... we could view the network as a whole
+- .... it was real time
+- .... it wasn't just metrics and and line charts
+- .... we could see issues before failure
+- .... the problem could be replayed
+- .... we could view and capture the problem data instead of just logs
+- .... distributed systems were not just shown as static boxes on confluence
+- .... the connections between systems were animated and interactive
+
+* Relay
+** Relay is a opt-in network capture that quantifies relationships between connected containered applications.
+
+* What it does
+- Provides a way to capture network traffic without slowing down the applications
+- Opt-in, can capture all or a few, it isn't a large mega appliation on a switch or reverse proxy
+- Compiles packet data into a real time interactive visual
+- Could provide the ability to rewind and fast-forward traffic to aid in production support
+- Could provide a way to open the packet data to view its details
+- It will ensure you see issues before falures
+
+* How it works
+- Relay operates in each Docker Host as a container itself
+- Each Docker Host contains a Relay container as well as the Application container
+- All application containers on a low level operation copy packet data to Relay container
+- Each Relay container receives the copied packets and send them to a Hub container to be processed
+- The Hub application will crunch the data into a visual with many benifites
+.image images/howitworks.jpg _ 400
+
+
+* What it Costs
+Time
+
+* Who benifits
+Everyone
+
+* What Environments can it be used in
+Possibly all, even production because much of the data will be encrypted preserving PCI compliance
+
+* Basic Idea
+.video images/animation.mp4 video/mp4 _ 900
+
+* Show The View
+
+* What about on a bigger scale
+.image images/sample_flowToAchieve.gif _ 800

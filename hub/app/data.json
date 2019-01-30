@@ -1,0 +1,25 @@
+{"nodes":[
+{"name":"f5","id":0},
+{"name":"Proxy","id":1},
+{"name":"TR2","id":2},
+{"name":"TR1","id":3},
+{"name":"NOS","id":4},
+{"name":"Proxy","id":5},
+{"name":"TR1","id":6},
+{"name":"TR2","id":7},
+{"name":"consul DB","id":8}
+],
+"links":[
+{"source":0,"target":1,"value":400.978},
+{"source":1,"target":2,"value":200.322},
+{"source":1,"target":3,"value":200.144},
+{"source":2,"target":4,"value":200.12},
+{"source":3,"target":4,"value":200.891},
+{"source":4,"target":6,"value":200.066},
+{"source":4,"target":7,"value":200.066},
+{"source":6,"target":5,"value":200.531},
+{"source":7,"target":5,"value":200.329},
+{"source":8,"target":1,"value":79.329},
+{"source":8,"target":5,"value":79.329}
+]}
+
