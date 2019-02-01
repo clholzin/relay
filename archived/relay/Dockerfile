@@ -1,7 +1,7 @@
 FROM golang:1.10
 #docker run --name relay relay &
 
-RUN echo 'Acquire::http::Proxy "http://proxy.aexp.com:8080";' >> /etc/apt/apt.conf
+#RUN echo 'Acquire::http::Proxy "http://localhost";' >> /etc/apt/apt.conf
 RUN echo 'nameserver 8.8.8.8' >> /etc/resolv.conf
 RUN apt-get update && apt-get update -y && apt-get install -y tcpdump
 

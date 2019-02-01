@@ -1,6 +1,6 @@
 FROM golang:1.10
 # docker run --privileged -p 80:80 -p 9999:9999 -p 443:443 --name hub hub
-#RUN echo 'Acquire::http::Proxy "http://proxy.aexp.com:8080";' >> /etc/apt/apt.conf
+#RUN echo 'Acquire::http::Proxy "localhost";' >> /etc/apt/apt.conf
 #RUN echo 'nameserver 8.8.8.8' >> /etc/resolv.conf
 
 WORKDIR /go/src/hub
